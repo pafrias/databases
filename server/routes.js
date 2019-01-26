@@ -10,6 +10,10 @@ router.get('/users', controller.users.get);
 
 router.post('/users', controller.users.post);
 
+// route to room controller get
+
+// route to room controller post
+
 
 module.exports = router;
 

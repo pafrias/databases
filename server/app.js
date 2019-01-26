@@ -1,12 +1,12 @@
 var express = require('express');
-var db = require('./db');
+var db = require('./db'); // mysql
 
 // Middleware
 var morgan = require('morgan');
 var parser = require('body-parser');
 
 // Router
-var router = require('./routes.js');
+var router = require('./routes.js'); // ends with controllers index.js
 
 var app = express();
 module.exports.app = app;
