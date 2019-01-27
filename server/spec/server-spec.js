@@ -24,7 +24,6 @@ describe('Persistent Node Chat Server', function () {
   });
 
   afterEach(function () {
-    //console.log(dbConnection.query('DESCRIBE users'))
     dbConnection.end();
   });
 

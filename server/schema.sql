@@ -1,35 +1,23 @@
 CREATE DATABASE chat;
 USE chat;
-CREATE TABLE users
-(
-  id INT NOT NULL
-  AUTO_INCREMENT,
-  name VARCHAR
-  (32) NOT NULL,
-  PRIMARY KEY
-  (id)
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR (32) NOT NULL,
+  PRIMARY KEY (id)
   /* default values?*/
 );
-  CREATE TABLE rooms
-  (
-    id INT NOT NULL
-    AUTO_INCREMENT,
-  name VARCHAR
-    (32) NOT NULL,
-  PRIMARY KEY
-    (id)
+CREATE TABLE rooms (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR (32) NOT NULL,
+  PRIMARY KEY (id)
 );
-    CREATE TABLE messages
-    (
-      id INT NOT NULL
-      AUTO_INCREMENT,
-  text VARCHAR
-      (140),
+CREATE TABLE messages (
+  id INT NOT NULL AUTO_INCREMENT,
+  text VARCHAR (140),
   created DATE NOT NULL,
   user_id INT NOT NULL,
   room_id INT NOT NULL,
-  PRIMARY KEY
-      (id)
+  PRIMARY KEY (id)
   /* will need foreign Keys*/
 );
 

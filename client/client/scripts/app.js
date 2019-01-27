@@ -15,13 +15,16 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
+
+    // Poll for new messages every 5 sec
+    setInterval(App.fetch, 5000);
   },
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
-      // examine the response from the server request:
-      console.log(data);
 
+      Rooms.update(data.results, RoomsView.render);
+      Messages.update(data.results, MessagesView.render);
       callback();
     });
   },
